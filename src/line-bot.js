@@ -4,7 +4,7 @@ import request from 'request';
 import config from '../config';
 
 const app = express();
-const port = process.env.PORT;
+const port = '7123';
 const { CHANNEL_ID, CHANNEL_SERECT, MID } = {...config};
 const LINE_API = 'https://trialbot-api.line.me/v1/events';
 
