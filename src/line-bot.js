@@ -33,7 +33,7 @@ function sendTextMessage(sender, text) {
     content: {
       contentType: 1,
       toType: 1,
-      text: text
+      text: text+"test"
     }
   };
 
