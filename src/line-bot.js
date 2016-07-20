@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import request from 'request';
 import config from '../config';
-import response from 'response';
+
 
 const app = express();
 const port = '7123';
@@ -14,9 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.post('/callback', (req, res) => {
   const result = req.body.result;
-  response.writeHead(200, {"Content-Type": "text/plain"});
-  response.write("Hello World");
-  response.end();
 
   for(let i=0; i<result.length; i++){
     const data = result[i]['content'];
