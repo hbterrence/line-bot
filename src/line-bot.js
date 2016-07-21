@@ -12,7 +12,7 @@ const LINE_API = 'https://trialbot-api.line.me/v1/events';
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.post('/callback', (req, res) => {
+app.post('/', (req, res) => {
   const result = req.body.result;
 
   for(let i=0; i<result.length; i++){
